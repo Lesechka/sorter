@@ -23,13 +23,14 @@ class Sorter {
             return this.arr;
     }
    sort(indices) {
-     var sorterArr = [];
+     const sorterArr = [];
      indices = indices.sort((a,b) => a-b);
-     for (var i = 0; i< indices.length; i++) {
+
+     for (let i = 0;  i < indices.length; i++) {
          sorterArr.push(this.arr[indices[i]]);
        }
        sorterArr.sort(this.comparator);
-        for (var i = 0; i<indices.length; i++) {
+       for (let i = 0;  i < indices.length; i++) {
         this.arr[indices[i]] = sorterArr.shift();
     }
 }
